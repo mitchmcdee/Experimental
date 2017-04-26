@@ -44,10 +44,17 @@ while len(stack) != 0:
         y = node[1] + direction[1]
         neighbour = (x,y)
 
-        # check valid neighbour
-        if neighbour not in visited and x >= 0 and y >= 0 and x < width and y < height and g[y][x] == '.':
-            visited.add(neighbour)
-            stack.append(neighbour)
+        # check valid neighbour to visit
+        if g[y][x] == 'O' or neighbour in visited:
+            continue
+
+        # check within bounds
+        if x < 0 or y < 0 or x >= width or y >= height:
+            continue
+
+        # add neighbour to stack and visited set
+        visited.add(neighbour)
+        stack.append(neighbour)
 
     # fill node
     g[node[1]][node[0]] = 'O'
