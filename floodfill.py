@@ -1,13 +1,21 @@
+import math
+
 # init sizes
-width = 100
-height = 40
+width = 30
+height = 30 
 
 # init empty grid
-g = [['0']*width for i in range(height)]
+g = [['.']*width for i in range(height)]
 
-# create diagonal border from top right down
-for i in range(len(g)):
-    g[i][width-i-1] = '1'
+# init circle dimensions (radius and center point)
+r = min(height,width)//2.5      # radius
+center = (width//2, height//2)  # center of grid
+
+# create empty circlular border in the grid
+for j in range(len(g)):
+    for i in range(len(g[j])):
+        if int(math.sqrt(abs(i-center[0])**2 + abs(j-center[1])**2)) == r:
+            g[j][i] = 'O'
 
 # print out grid before
 print('Before:')
@@ -17,8 +25,8 @@ for i in range(len(g)):
 # add some spacing
 print('\n\n')
 
-# add root to stack and visited
-root = (0,0)
+# add root (center of grid) to stack and visited
+root = center
 visited = set(root)
 stack = [root]
 
@@ -37,14 +45,14 @@ while len(stack) != 0:
         neighbour = (x,y)
 
         # check valid neighbour
-        if neighbour not in visited and x >= 0 and y >= 0 and x < width and y < height and g[y][x] == '0':
+        if neighbour not in visited and x >= 0 and y >= 0 and x < width and y < height and g[y][x] == '.':
             visited.add(neighbour)
             stack.append(neighbour)
 
     # fill node
-    g[node[1]][node[0]] = '1'
+    g[node[1]][node[0]] = 'O'
 
 # print out grid after
 print('After:')
 for i in range(len(g)):
-    print(''.join(g[i]))
+    print(' '.join(g[i]))
