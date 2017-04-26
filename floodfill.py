@@ -27,12 +27,13 @@ directions = [(1,0), (0,1), (-1,0), (0,-1)]
 
 # perform dfs
 while len(stack) != 0:
-	curr = stack.pop()
+	# get next node
+	node = stack.pop()
 
 	# check neighbours
 	for direction in directions:
-		x = curr[0] + direction[0]
-		y = curr[1] + direction[1]
+		x = node[0] + direction[0]
+		y = node[1] + direction[1]
 		neighbour = (x,y)
 
 		# check valid neighbour
@@ -40,7 +41,8 @@ while len(stack) != 0:
 			visited.add(neighbour)
 			stack.append(neighbour)
 
-	g[curr[1]][curr[0]] = '1'
+	# fill node
+	g[node[1]][node[0]] = '1'
 
 # print out grid after
 print('After:')
