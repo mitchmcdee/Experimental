@@ -1,5 +1,6 @@
 import unittest
 from num2words import num2words
+from random import randrange
 
 tiny = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 small = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
@@ -8,8 +9,7 @@ big = ["thousand", "million", "billion", "trillion", "quadrillion", "quintillion
 
 def numToString(num=None):
     length = len(str(num))
-    digits = [int(n) for n in list(str(num))]
-    nums = [str(e) + "0" * (length - i - 1) for i,e in enumerate(digits)]
+    digits = list(map(int, list(str(num))))
 
     if type(num) != int:
        return "NaN"
@@ -44,9 +44,11 @@ def numToString(num=None):
 
 class Test(unittest.TestCase):
     def testNumbers(self):
-        for i in range(0, 10000000, 17):
-            print(numToString(i))
-            self.assertEqual(num2words(i), numToString(i))
+        # Test a hundred numbers in each range
+        for i in range(len(big) + 1):
+            for j in range(0, 100):
+                testNum = randrange(1 * (10 ** (i * 3)), 999 * (10 ** (i * 3)))
+                self.assertEqual(num2words(testNum), numToString(testNum))
 
 
 if __name__ == "__main__":
