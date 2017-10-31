@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+    <title>EAIT Project Database</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#49075E" />
+
+    <link rel="stylesheet" href="https://eait.uqstatic.net/xweb/2014/css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="https://eait.uqstatic.net/xweb/2014/css/uq.css" type="text/css" />
+
+    <script type="text/javascript" src="https://eait.uqstatic.net/xweb/2014/js/uq.modernizr.js"></script>
+    <script type="text/javascript" src="https://eait.uqstatic.net/lib/jquery/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="https://eait.uqstatic.net/lib/jquery/jquery-ui-1.10.3/ui/minified/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://eait.uqstatic.net/lib/jquery/equalize.js/js/equalize.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="uq-header">
+    <div class="row equalize">
+        <div class="medium-9 columns equalize">
+            <div id="uq-header-logo">
+                <a href="http://www.uq.edu.au/" title="UQ Homepage" class="valign">The University of Queensland</a>
+            </div>
+            <div id="uq-header-ou">
+                <h2 class="valign">EAIT Student IT</h2>
+            </div>
+        </div>
+
+        <div id="uq-header-search" class="medium-3 columns show-for-medium-up">
+            <form id="searchbox" method="get" action="/search.ephp" class="valign">
+                                <div class="row">
+                                        <div class="small-12 columns">
+                        <input type="text" name="search" placeholder="Search..." id="uq-header-search-input" />
+                        <input type="submit" value="Go" class="postfix" id="uq-header-search-submit" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="uq-top-nav">
+<nav>
+    <a href="#" id="uq-top-nav-pull">Menu <img src="https://eait.uqstatic.net/xweb/2014/images/nav-icon.png" height="20" width="20" /></a>
+    <ul>
+        <li><a href="http://student.eait.uq.edu.au/">Home</a></li>      <li><a href="index.ephp">Projects</a></li>      <li><a href="myrecord.ephp">My Record</a></li>  </ul>
+</nav>
+</div>
+
+<div id="uq-content">
+    <div id="content-primary" class="row">
+        <div class="small-12 columns">
+
+            <div class="row">
+                <div class="medium-12 columns">
+<style>
+            #content {width:auto;}
+            #content-primary {width:auto; line-height: 130%;}
+            select {width: auto; margin: 0 0 0 0; padding: 1px; height: auto; }
+            form {padding: 0px; }
+            p { line-height: 130%; }
+            table tr th, table tr td { padding: 1.5px; }
+            h4 {font-size: 15px; }
+            h3 {font-size: 18px; font-weight: bold; }
+            h2 {font-size: 22px; }
+            h1 {font-size: 25px; }
+            .supervisorname { color: black; border-top: 1px solid #000; padding-top: 20px;
+                margin-bottom: 2px; margin-top: 10px;
+                text-decoration: underline; }
+            .projecttitle { font-weight: bold; }
+            </style><h1 style="margin:0;">ENGG4801, METR4900, COMP6803, DECO6801, ENGG7820, METR7820, ENGG780x, COMP78xx, DECO786x - ITEE Thesis Projects</h1><br /><div style='font-size: 1.3em; margin: 10px;'>
+            Commencing Semester 1 2018<br />
+            Coordinator: Alexander Pudmenzky (<a href="mailto:a.pudmenzky@uq.edu.au">a.pudmenzky@uq.edu.au</a>)</div><hr style="margin-top:0;margin-bottom:0;"><span title="View lists of all projects / students / seminars for this course offering"><a  href="?menu=&offering=253"><img src="images/minusbox.gif" width=15
+            height=15 align=absmiddle border=0><b>List Projects / Students / Seminars</b></a></span><br><img src="images/indentdash.gif" width=30
+        height=15 align=absmiddle border=0><a  href="?function=listProjects&offering=253">View all project details</a><br><img src="images/indentdash.gif" width=30
+        height=15 align=absmiddle border=0><a  href="?function=listSeminars&offering=253">View full seminar schedule</a><hr style="margin-top:0;margin-bottom:0;"><h3 style="margin-bottom:1mm;margin-top:1mm;">Project List</h3><form style="margin-bottom:0;margin-top:0;" action="?form=1" method=get>
+<input type='hidden' name="function" value="listProjects"><input type='hidden' name="offering" value="253"><table border=0><tr><th align=right valign=top>Filter by supervisor:</th><td><select size='1' name="supervisor">
+<option value="">Include all supervisors</option>
+<option value="uqaabbos">Abbosh, Amin</option>
+<option value="uquabeyr">Abeyratne, Udantha</option>
+<option value="uqdabram">Abramson, David Andrew</option>
+<option value="uqmalam8">Alam, Jan E</option>
+<option value="uqsamino">Aminossadati, Saiied</option>
+<option value="cspbaile">Bailes, Paul Anthony Christopher</option>
+<option value="uqtbaldo">Baldock, Tom</option>
+<option value="uqnbergm">Bergmann, Neil William</option>
+<option value="uqkbial1">Bialkowski, Konstanty</option>
+<option value="uqmbode1">Boden, Marie Augusta Kristina</option>
+<option value="uqjcarpe">Carpenter, Joel</option>
+<option value="uqscha22">Chandra, Shekhar</option>
+<option value="cmscrozi">Crozier, Stuart</option>
+<option value="uqgdemar">Demartini, Gianluca</option>
+<option value="uqmdinh1">Dinh, Minh Ngoc</option>
+<option value="uqmdsouz">DSouza, Matthew Jonathan Andrew</option>
+<option value="uqgdura1">Durantin, Gautier</option>
+<option value="uqhfahmi">Fahmi, Hani Marco</option>
+<option value="uqjfripp">Fripp, Jurgen Eduard</option>
+<option value="uqmfuent">Fuentes, Miguel Angel</option>
+<option value="uqmgalla">Gallagher, Marcus Reginald</option>
+<option value="uqmgriff">Griffin, Mark Philip</option>
+<option value="uqdgwynn">Gwynne, David</option>
+<option value="uqihayes">Hayes, Ian James</option>
+<option value="uqphigg1">Higgins, Paul</option>
+<option value="uqwhua">Hua, Wen</option>
+<option value="uqzhuang">Huang, Helen</option>
+<option value="e4pjacob">Jacobs, Peter</option>
+<option value="uqjjin">Jin, Jin</option>
+<option value="uqrjurda">Jurdak, Raja</option>
+<option value="uqhkhosr">Khosravi, Hassan</option>
+<option value="uqnkotte">Kottege, Navinda</option>
+<option value="uqmkris1">Krishnamoorthy, Mohan</option>
+<option value="uqhkurni">Kurniawati, Hanna</option>
+<option value="uqmli3">Li, Mingyan</option>
+<option value="uqlfeng">Liu, Feng</option>
+<option value="e3blovel">Lovell, Brian Carrington</option>
+<option value="uqhlui">Lui, Antony</option>
+<option value="uqbmatth">Matthews, Benjamin Robert</option>
+<option value="uqpmcare">McAree, Ross</option>
+<option value="uqpmogh1">Moghadam, Peyman</option>
+<option value="uqbmoham">Mohammed, Beadaa Jasem</option>
+<option value="uqrmorga">Morgan, Richard</option>
+<option value="uqnmithu">Nadarajah, Mithulan</option>
+<option value="uqangu16">Nguyen, Anthony Ngoc</option>
+<option value="uqhngu36">Nguyen, Hoang Anh</option>
+<option value="uqqnguy2">Nguyen, Quoc Viet Hung</option>
+<option value="uqposhe1">O'Shea, Peter John</option>
+<option value="uqspileg">Pileggi, Salvatore</option>
+<option value="uqmportm">Portmann, Marius</option>
+<option value="e3apostu">Postula, Adam Jozef</option>
+<option value="uqppound">Pounds, Paul</option>
+<option value="anapudme">Pudmenzky, Alexander</option>
+<option value="uqxqi1">Qi, Xiaoqiong</option>
+<option value="e3arakic">Rakic, Aleksandar</option>
+<option value="uqcreids">Reidsema, Carl</option>
+<option value="uqssadiq">Sadiq, Shazia Wasim</option>
+<option value="e3tsaha">Saha, Tapan Kumar</option>
+<option value="uqpsande">Sanderson, Penny</option>
+<option value="uqmshara">Sharaf, Mohamed Abdel Kader</option>
+<option value="uqrshar4">Sharma, Rahul</option>
+<option value="uqssing7">Singh, Surya</option>
+<option value="uqjstee8">Steel, Jim</option>
+<option value="uqpsutto">Sutton, Peter</option>
+<option value="uqpterri">Terrill, Philip Ian</option>
+<option value="uqrtho17">Thomas, Richard</option>
+<option value="uqpvale1">Valencia, Philip</option>
+<option value="uqsville">Viller, Stephen Alexandre</option>
+<option value="uqywan14">Wang, Yifan</option>
+<option value="uqawilie">Wiliem, Arnold</option>
+<option value="cmswilso">Wilson, Stephen James</option>
+<option value="uqhyin1">Yin, Hongzhi</option>
+<option value="uqxzhou">Zhou, Xiaofang</option>
+</select><font size=-2>(Only supervisors who have supplied information to date are listed)</font></td></tr><tr><th align=right valign=top>Show projects:</th><td><select size='1' name="status"><option selected='selected' value="all">All projects (allocated and available)</option>
+<option value="available">Only projects which are available</option>
+<option value="taken">Only projects which have been (fully) allocated</option>
+</select></td></tr><tr><th align=right valign=top>Filter by research group:</th><td><select size='1' name="research_group">
+<option value="">Include all</option>
+<option value="ACCS">ACCS - ARC Centre for Complex Systems</option>
+<option value="ACID">ACID - Australasian Centre for Interaction Design</option>
+<option value="ACMC">ACMC - Advanced Computational Modelling Centre</option>
+<option value="BME">BME - Biomedical Engineering</option>
+<option value="CEIT">CEIT - Centre for Educational Innovation and Technology</option>
+<option value="CGS">CGS - Cognitive Systems Engineering Group</option>
+<option value="ChemEng">ChemEng - Division of Chemical Engineering</option>
+<option value="CIS">CIS - Complex and Intelligent Systems Group</option>
+<option value="CSSIP">CSSIP - CRC for Sensor Signal and Information Processing</option>
+<option value="DKE">DKE - Data and Knowledge Engineering Group</option>
+<option value="DSTC">DSTC - CRC for Enterprise Distributed Systems Technology</option>
+<option value="eLIPSE">eLIPSE - Centre for eLearning Innovations and Partnerships in Science and Engineering</option>
+<option value="EMI">EMI - Electromagnetics and Imaging Group</option>
+<option value="eResearch">eResearch - eResearch</option>
+<option value="ES">ES - Embedded Systems Group</option>
+<option value="ESSCC">ESSCC - Earth Systems Science Computational Centre</option>
+<option value="ID">ID - Interaction Design Group</option>
+<option value="IMB">IMB - Institute for Molecular Bioscience</option>
+<option value="MechEng">MechEng - Division of Mechanical Engineering</option>
+<option value="Mining">Mining - Division of Mining and Minerals Process Engineering</option>
+<option value="MOC">MOC - Microwave and Optical Communications</option>
+<option value="MPC">MPC - Microwave, Photonics and Communications</option>
+<option value="NA">NA - Not applicable / non-ITEE</option>
+<option value="PES">PES - Power and Energy Systems</option>
+<option value="Physics">Physics - Physics</option>
+<option value="QBIT">QBIT - QAAFI Biological Information Technology</option>
+<option value="QCAT">QCAT - CSIRO Queensland Centre for Advanced Technologies</option>
+<option value="SAS">SAS - Security and Surveillance</option>
+<option value="SMI">SMI - Sustainable Minerals Institute</option>
+<option value="SSE">SSE - Systems and Software Engineering Group</option>
+<option value="SVRC">SVRC - Software Verification Research Centre</option>
+<option value="UBQ">UBQ - Ubiquitous Computing</option>
+</select></td></tr><tr><th align=right valign=top>Filter by discipline:</th><td><select name="discipline">
+<option value="">Include all</option><optgroup label="School of ITEE">
+<option value="AI/Cognitive Science">AI/Cognitive Science</option>
+<option value="Biomedical Engineering">Biomedical Engineering</option>
+<option value="Communications">Communications</option>
+<option value="Computational Science">Computational Science</option>
+<option value="Computer Systems">Computer Systems</option>
+<option value="eLearning">eLearning</option>
+<option value="eResearch">eResearch</option>
+<option value="Electronics">Electronics</option>
+<option value="Embedded Systems">Embedded Systems</option>
+<option value="Human Computer Interaction">Human Computer Interaction</option>
+<option value="Information Environments">Information Environments</option>
+<option value="Information Systems">Information Systems</option>
+<option value="Microwaves and Radar">Microwaves and Radar</option>
+<option value="Multimedia">Multimedia</option>
+<option value="Photonics and Optical Communications">Photonics and Optical Communications</option>
+<option value="Power">Power</option>
+<option value="Robotics">Robotics</option>
+<option value="Signal and Image Processing">Signal and Image Processing</option>
+<option value="Software" selected>Software</option>
+<option value="Systems Engineering">Systems Engineering</option>
+</optgroup>
+</select></td></tr><tr><th align=right valign=top>Filter by project size:</th><td><select size='1' name="size"><option value="">Include all
+<option selected='selected' value="4">#4</option>
+<option value="6">#6</option>
+<option value="8">#8</option>
+</select></td></tr><tr><th align=right valign=top>Filter by degree program:</th><td><select size='1' name="program"><option value="">Include all
+<option selected='selected' value="BE">BE</option>
+<option value="BE/ME">BE/ME</option>
+<option value="BInfTech(Hons)">BInfTech(Hons)</option>
+<option value="BMultMedDes(Hons)">BMultMedDes(Hons)</option>
+<option value="MEngSc">MEngSc</option>
+<option value="MCompSc">MCompSc</option>
+<option value="MInfTech">MInfTech</option>
+<option value="MIDes">MIDes</option>
+</select></td></tr><tr><th align=right valign=top>Filter by project duration:</th><td><select size='1' name="duration"><option value="">Include all
+<option value="1">1 semester</option>
+<option selected='selected' value="2">2 semesters</option>
+</select></td></tr></table><input type=submit name=submit value="Show projects">&nbsp;&nbsp;</form><hr>Industry projects may also be available - see the
+        <a href="http://www.corptech.com.au/">CEED website</a>
+        for details.<hr><h3 class="supervisorname">David Andrew Abramson</h3><p style="margin-top:1mm;">Office: 47-508<br><span title="5xxxx - add prefix (07)336
+6xxxx - add prefix (07)334
+1xxxx - add prefix (07)338">Phone: 56131</span><br>Email: <a href="mailto:david.abramson@uq.edu.au">david.abramson@uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">2 - Workflows on a global scale</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>David Andrew Abramson</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;2&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Software<br>Systems Engineering&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>The project require skills in software development with a solid appreciation of distributed computing and systems programming.</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BE/ME,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MInfTech,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>In this project we plan to exploit the AARnet Trans-Pacific link, which has recently been upgraded to 100 Gbps, to demonstrate that workflows can execute at a global scale. The project involves building workflows the model cardiac science, and perform image processing, and implement these using the Kepler workflow engine. Data movement will be performed with a new data fabric being developed at UQ called MeDiCI.
+
+
+</td></tr></table><h3 class="supervisorname">Paul Anthony Christopher Bailes</h3><p style="margin-top:1mm;">Office: Off Campus<br><span title="5xxxx - add prefix (07)336
+6xxxx - add prefix (07)334
+1xxxx - add prefix (07)338">Phone: Off Campus</span><br>Email: <a href="mailto:paul@itee.uq.edu.au">paul@itee.uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">1 - Design and Implementation of Zoe: a Totally-Functional Programming Language</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Paul Anthony Christopher Bailes</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;1&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/sse/">Systems and Software Engineering Group</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>at least concurrent enrolment in Compilers &amp;amp;amp;amp; Interpreters</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over two semesters for BE,BInfTech(Hons),MEngSc,MCompSc students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>A Totally-Functional Programming language needs to implement all data types, both built-in and programmer-defined, as functions (folds, by default). The Zoe language is a typeless Haskell subset for which a prototype preprocessor has been developed.
+
+This project could involve different or overlapping facets, including
+
+. more robust reimplementation of the existing prototype preprocessor using established compiler-compiler technology
+
+. development of the design of Zoe, including integration of recursive data type definitions with operations on those types
+
+. extensions for object-orientation (inheritance)
+
+. comprehensive dynamic type-checking, or else integration into the Haskell typing regime</td></tr></table><h3 class="supervisorname">Marie Augusta Kristina Boden</h3><p style="margin-top:1mm;">Office: 78-549<br><span title="5xxxx - add prefix (07)336
+6xxxx - add prefix (07)334
+1xxxx - add prefix (07)338">Phone: 53966</span><br>Email: <a href="mailto:marieb@itee.uq.edu.au">marieb@itee.uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">1 - Transitioning from icon based programming to learn Python for school students</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Marie Augusta Kristina Boden</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;1&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/ixd">Interaction Design Group</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Human Computer Interaction<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Design and prototype of a system to be used by primary or high school students. The system is supposed to function as a support for the existing in-class teaching of the new Digital Technologies curriculum. The project will be developed in collaboration with a school teacher and the supervisor.</td></tr></table><h3 class="supervisorname">Shekhar Chandra</h3><p style="margin-top:1mm;">Office: 78-651<br><span title="5xxxx - add prefix (07)336
+6xxxx - add prefix (07)334
+1xxxx - add prefix (07)338">Phone: 58359</span><br>Email: <a href="mailto:shekhar.chandra@uq.edu.au">shekhar.chandra@uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">8 - Design and Implement Medical Imaging Viewers using the Simple Medical Imaging Library Interface</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Shekhar Chandra</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;8&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/bme/">Biomedical Engineering</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Biomedical Engineering<br>Computational Science<br>eResearch<br>Human Computer Interaction<br>Information Systems<br>Signal and Image Processing<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>C++, Qt</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Image viewers are essential in medical imaging research, where the data is often high dimensional (three dimensional or more) and show the human body in exquisite detail. A recent open-source library called Simple Medical Imaging Library Interface (SMILI, http://smili-project.sourceforge.net/) has been developed by the supervisor that makes medical image analysis and application creation easy. It comes with intuitive graphical user interface (GUI) components and a simple application programming interface (API).
+
+In this project, the student will help design, develop and test image viewers built on the SMILI library that can be easily used by medical practitioners, clinicians and researchers alike. The project will provide valuable software engineering experience to the student while also working within a leading group in medical imaging and scientific visualisation.</td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="http://researchers.uq.edu.au/researcher/9654">http://researchers.uq.edu.au/researcher/9654</a>
+        </td></tr></table><h3 class="supervisorname">Matthew Jonathan Andrew DSouza</h3><p style="margin-top:1mm;">Office: 78-710<br><span title="5xxxx - add prefix (07)336
+6xxxx - add prefix (07)334
+1xxxx - add prefix (07)338">Phone: 51195</span><br>Email: <a href="mailto:m.dsouza@uq.edu.au">m.dsouza@uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">1 - Farmbot Atmospheric Gas Sensing: Super Project</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Matthew Jonathan Andrew DSouza</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;1&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/~esg">Embedded Systems Group</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>3</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Communications<br>Computer Systems<br>Electronics<br>Embedded Systems<br>Microwaves and Radar<br>Robotics<br>Signal and Image Processing<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>CSSE3010 and/or CSSE4011</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4 over two semesters for BE,MEngSc,MCompSc students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Farmbot is an open source farming automation tool. Farmbot seeds, cultivates and monitors plants, autonomously. Farmbot uses a CNC machine, combined with cameras and other sensors to perform its tasks. Farmbot is controlled through either a web portal interface or a smartphone app. More information about Farmbot is available at http://farmbot.io/
+
+The goal of this project is to use and enhance the capabilities of farmbot by integrating new gas sensors. This project will focus on integrating gas sensors such as CO2, Oxygen and other gas sensors, into the farmbot, in order be used to monitor the growth of the crop. For example, C02 could be used to predict the carbon output of the current crop. This will involve working with embedded platforms and may also involve designing PCBs.
+
+
+For this project, we are looking for applicants that are self-starters and have an idea on what they are interested in. When contacting us, please take a look at the farmbot.io webpage and come up a few ideas on what type of contribution you could make.
+
+NOTE: Each member will be given an individual topic to complete.
+
+Staff: Matt D’Souza &amp; Konstanty Bialkowski</td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">4 - Farmbot Data Visualisation: Super Project</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Matthew Jonathan Andrew DSouza</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;4&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/~esg">Embedded Systems Group</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Computational Science<br>Computer Systems<br>Human Computer Interaction<br>Information Environments<br>Information Systems<br>Multimedia<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4 over two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Farmbot is an open source farming automation tool. Farmbot seeds, cultivates and monitors plants, autonomously. Farmbot uses a CNC machine, combined with cameras and other sensors to perform its tasks. Farmbot is controlled through either a web portal interface or a smartphone app. More information about Farmbot is available at http://farmbot.io/
+
+The goal of this project is to use and enhance the capabilities of farmbot by using advanced visualisation techniques such as augmented or virtual reality based systems (e.g. Google Cardboard, etc). For example the water use for a particular spot, could be visualised as a graph, when a user points their area at that location. This project will focus on using farmbot to ensure that healthy plants can be cultivated and monitored, using sufficient conservation of resources such as water and nutrients.
+
+For this project, we are looking for applicants that are self-starters and have an idea on what they are interested in. When contacting us, please take a look at the farmbot.io webpage and come up a few ideas on what type of contribution you could make.
+
+Staff: Matt D’Souza &amp; Konstanty Bialkowski</td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">5 - Farmbot Yield Prediction: Super Project</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Matthew Jonathan Andrew DSouza</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;5&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/~esg">Embedded Systems Group</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>3</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Computational Science<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4 over two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Farmbot is an open source farming automation tool. Farmbot seeds, cultivates and monitors plants, autonomously. Farmbot uses a CNC machine, combined with cameras and other sensors to perform its tasks. Farmbot is controlled through either a web portal interface or a smartphone app. More information about Farmbot is available at http://farmbot.io/
+
+The goal of this project is to use and enhance the capabilities of farmbot through the use of modelling &amp; prediction. This would involve a form of machine learning to optimise water usage, weather needs, plant age, yield prediction, optimum harvest time or optimum lighting conditions.
+
+For this project, we are looking for applicants that are self-starters and have an idea on what they are interested in. When contacting us, please take a look at the farmbot.io webpage and come up a few ideas on what type of contribution you could make.
+
+</td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">10 - Farmbot IOT Interface: Super Project</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Matthew Jonathan Andrew DSouza</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;10&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/~esg">Embedded Systems Group</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Computer Systems<br>Human Computer Interaction<br>Information Environments<br>Information Systems<br>Multimedia<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4 over two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Farmbot is an open source farming automation tool. Farmbot seeds, cultivates and monitors plants, autonomously. Farmbot uses a CNC machine, combined with cameras and other sensors to perform its tasks. Farmbot is controlled through either a web portal interface or a smartphone app. More information about Farmbot is available at http://farmbot.io/
+
+The goal of this project is to use and enhance the capabilities of farmbot by adding Internet of Things (IOT) infrastructure. This involves setting up a database and providing a web portal for accessing the various sensor and other information/data streams generated by the farmbot.
+
+For this project, we are looking for applicants that are self-starters and have an idea on what they are interested in. When contacting us, please take a look at the farmbot.io webpage and come up a few ideas on what type of contribution you could make.
+
+Staff: Matt D’Souza &amp; Konstanty Bialkowski</td></tr></table><h3 class="supervisorname">Jurgen Eduard Fripp</h3><p style="margin-top:1mm;">Office: Off Campus<br>Email: <a href="mailto:j.fripp@uq.edu.au">j.fripp@uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">1 - Spatial temporal modeling of the developing brain</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Jurgen Eduard Fripp</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;1&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/bme/">Biomedical Engineering</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Computational Science<br>Signal and Image Processing<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Preterm birth is a significant public health concern. For infants born very preterm (&lt; 32 weeks completed gestation), there is a high instance of developmental disability. Magnetic resonance imaging (MRI) is can be used to quantify brain development because of the high spatial resolution and contrast that enable the observation of structure-specific developmental status. In this project, the candidate will develop algorithms that can be used to spatially and temporal model the cortical and sub-cortical development seen from MRIs of a large cohort of preterm infants, imaged at 30 weeks and again at term equivalent age.
+</td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">2 - Automatic muscle and fat segmentation MRI.</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Jurgen Eduard Fripp</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;2&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/bme/">Biomedical Engineering</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Biomedical Engineering<br>Computational Science<br>Signal and Image Processing<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Magnetic resonance imaging is commonly used to study skeletal muscle and adipose tissue distribution and quantification in different body regions. The quantification of the muscle mass is of interest in exercise physiology, as it is strongly correlated with muscular health, strength, and functionality. This project, the candidate will develop image segmentation techniques to accurately assess tissue composition from MRI.</td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">3 - Automated segmentation of ligaments and joint effusion in MRI.</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Jurgen Eduard Fripp</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;3&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/bme/">Biomedical Engineering</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Computational Science<br>Signal and Image Processing<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>The anterior cruciate ligament (ACL) is one of a pair of cruciate ligaments in the human knee. Injuries to this ligament can trigger the subsequent development of osteoarthritis. Joint effusion, cartilage and bone lesions are frequently associated with osteoarthritis and is an important marker of therapeutic response. The candidate for this project will develop and validate image segmentation schemes based on magnetic resonance imaging (MRI) for the quantification of the ligament and joint effusion volume in the knee of patients who've had ACL injuries or developed osteoarthritis.</td></tr></table><h3 class="supervisorname">Marcus Reginald Gallagher</h3><p style="margin-top:1mm;">Office: 47-303<br><span title="5xxxx - add prefix (07)336
+6xxxx - add prefix (07)334
+1xxxx - add prefix (07)338">Phone: 56197</span><br>Email: <a href="mailto:marcusg@itee.uq.edu.au">marcusg@itee.uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">8 - Machine Learning Super Project</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Marcus Reginald Gallagher</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;8&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>10</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Computational Science<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BE/ME,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MInfTech,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>[Note: Prof. Neil Bergmann and I are co-suprvising this &quot;Machine Learning Super Project&quot;.]  
+
+Machine Learning is a way of computing system design where the system learns by example, i.e. it trains itself of examples of system inputs and outputs. For example, rather than trying to devise criteria that would distinguish between pictures of cats and dogs, a machine learning algorithm would devise its own internal criteria based on hundreds or thousands of labelled pictures of cats and dogs so that it could make correct decisions when it encounters new unlabelled pictures. There are many different machine learning algorithms. Each algorithm has a different sort of parametrised internal formula that it uses for decision making, and in each case &quot;learning&quot; involves determining good parameters for those internal formulas. Machine learning algorithms have been well known for several decades, but the abundance of very large sets of online data has renewed interest in these algorithms. Systems like on-line recommender systems, web-search ranking engines, speech recognition, and image understanding are all based on machine learning. In order to promote interest and to identify solutions to problems that are amenable to machine learning, there are a number of sites (e.g. Kaggle) that offer open &quot;challenge&quot; problems. Once registered, engineers can devise and submit potential solutions to commercial machine learning problems, and after a few months, the best solution is identified, and often a prize is awarded. 
+
+This thesis project is based around the model of challenge problems as offered on Kaggle.  That is, the aim of your project would be to build a machine learning software system(s) and apply it to a problem(s) given by an available dataset(s).  The project consists of two phases: 
+
+1. In Semester 1 of the project, students will develop their expertise in machine learning algorithms, in relevant programming languages (Python and R and their relevant libraries), and work through relevant tutorial/standard examples in Kaggle, or a similar source. 
+
+2. During Semester 2 of the project, students will choose one or more open challenge problems on Kaggle or elsewhere.  If the problem is for a current challenge, you would be expected to submit an entry, and evaluate youir success in the challenge. 
+
+3. Although only submitting one final solution to Kaggle (if applicable), students are expected to code and compare a selection of machine learning approaches, and to document these in their written thesis. 
+
+4. Students who enrol in a #6 version of the project will be expected to submit solutions for 2 Kaggle challenge problems OR discuss with me to ensure the project is appropriately scoped. 
+
+Pre-requisites: Students will either need to have already completed COMP4702 (Machine Learning) OR CSSE3080 (S3/2015 - machine Learning) OR complete suitable on-line courses and readings in Machine Learning during the first few weeks of your project. Reasonable mathematical, numerical computing and statistical skills are an advantage. Students will need to be competent and confident programmers in a suitable programming language (typical choices would be Python, R, or Matlab) or be willing to learn a language during the first few weeks of the project. The project should be suitable for undergraduate or coursework postgraduates from any discipline. </td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">9 - Optimisation Super Project</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Marcus Reginald Gallagher</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;9&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/cis/">Complex and Intelligent Systems Group</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>10</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Computational Science<br>Computer Systems<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>All useful background: programming, algorithms and data structures, numerical methods, statistics, discrete and/or continuous maths, machine learning, AI, optimisation, operations research</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BE/ME,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MInfTech,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>**Background**: Optimisation problems (e.g. minimize cost or error, maximize efficiency or profit) occur everywhere (science, engineering, industry, government) and there are a wide variety of algorithms that can be applied to these problems.  In general, the optimization problem is intractable, unless certain assumptions can be made about the problem structure.  Therefore in practice the aim is often to find as good a solution as possible given some amount of resources (e.g. computing time).
+
+**Aims**: The basic aim of this project is to use one (or more) optimisation algorithms to solve one (or more) problems.  There is considerable flexibility in the choice of: (a) algorithm(s); (b) problems(s); (c) software implementation and (d) experimental evaluation that can be done.  Each project would be expected to explore deeply at least one of (a) - (d).  A non-exhaustive list of suggested algorithms, problems and software packages will be provided.
+
+**Project structure (year-long example)**: Background reading will be given to be covered in the first few weeks of the project.  The remainder of Sem1 will be about achieving a &quot;proof-of-concept&quot; application of an algorithm to a (likely) simple/benchmark problem and producing some results.  Semester 2 will then focus on a more detailed study. 
+</td></tr></table><h3 class="supervisorname">Mark Philip Griffin</h3><p style="margin-top:1mm;"><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">7 - Website/database design for healthcare</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Mark Philip Griffin</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;7&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Human Computer Interaction<br>Information Systems<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>A robust healthcare system is only possible through the support of a dedicated patient information system. Such a system has functionality for the parsing of new patient records, automated data checking, and data visualization. This project focuses on the development of a website and database system for this functionality, and builds upon the work of previous students. This work also utilizes data from the Queensland Ambulance Service, where the QAS compiles approximately 700,000 incident reports per year.</td></tr></table><h3 class="supervisorname">Ian James Hayes</h3><p style="margin-top:1mm;">Office: 78-326<br><span title="5xxxx - add prefix (07)336
+6xxxx - add prefix (07)334
+1xxxx - add prefix (07)338">Phone: 52386</span><br>Email: <a href="mailto:ian.hayes@itee.uq.edu.au">ian.hayes@itee.uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">2 - Reasoning about properties of concurrent programs using a theorem prover</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Ian James Hayes</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;2&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/sse/">Systems and Software Engineering Group</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>Strong skills in mathematics.</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,8 over two semesters for BE,BInfTech(Hons),MCompSc students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>This project will look at advanced techniques for reasoning about programs making use of a theorem prover. The techniques will be applied to algebraic theories of concurrent programs.
+This project will be jointly supervised by Dr Larissa Meinicke.</td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">4 - Analysis of security properties of Java programs</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Ian James Hayes</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;4&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/sse/">Systems and Software Engineering Group</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbspnbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>Pre-requisite of COMP4403/7402</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over two semesters for BE,BInfTech(Hons),MCompSc students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Java makes use of a security manager to handle secure execution of untrusted code in environments like web applications or mobile phones. Writing programs that handle running untrusted code is tricky: there are over 60 guidelines for writing secure Java code. The aim of this project is to examine a range of coding guidelines and devise systematic checks that could be applied, for example, using a static analysis tool, to ensure that Java code meets the guidelines. Note that this project will be jointly supervised by Dr Larissa Meinicke and Dr Xi Wu.</td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">5 - Declarative Rewrite Rules Compiler and Proofs (C++ or Python)</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Ian James Hayes</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;5&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4 over two semesters for BE,BInfTech(Hons) students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>This project is really a CEED project. The details are at the link below and you will need to apply for it as a CEED project provided your course rules allow you to.
+
+</td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="http://www.corptech.com.au/index.php/component/ceed/projects/view?id=2364">http://www.corptech.com.au/index.php/component/ceed/projects/view?id=2364</a>
+        </td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">6 - Optimisations for experimental Datalog compiler</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Ian James Hayes</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;6&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>COMP4403</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4 over one or two semesters for BE,BInfTech(Hons) students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>CEED Project: Oracle Labs has developed an experimental Datalog compiler that enables static program analyses to be written in a high-level declarative language, which are then compiled down to the equivalent LLVM-based C++ code that integrates directly into the Parfait static code analysis framework, and can then be run over the target programs. Subsequent work added custom predicates to work directly with paths and path conditions in order to take advantage of Parfait’s underlying path-sensitive dataflow framework, which demonstrated the ability to generate analyses on par with hand-written C++ analyses, with less than 10% of the code required.
+
+The performance of the generated code for more complex Datalog however could be significantly improved, as only basic brute-force optimisations have been implemented.
+
+For this project, we would like to start implementing some of the low-hanging fruit in terms of available optimisations, including simple pattern-match transformations, selective caching of intermediate results, and simplifications based on the data structure invariants.</td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="http://www.corptech.com.au/index.php/component/ceed/projects/view?id=2365">http://www.corptech.com.au/index.php/component/ceed/projects/view?id=2365</a>
+        </td></tr></table><h3 class="supervisorname">Navinda Kottege</h3><p style="margin-top:1mm;">Office: Off Campus<br>Email: <a href="mailto:n.kottege@uq.edu.au">n.kottege@uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">1 - Developing a steep terrain controller for legged robots</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Navinda Kottege</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;1&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.cat.csiro.au/">CSIRO Queensland Centre for Advanced Technologies</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Robotics<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>GPA &gt; 5.5. Hands on experienced in working with robots</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over two semesters for BE,BE/ME,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>In this project the goal is to deliver a high level controller for a legged robot that can navigate steep terrain of an arbitrary and changing gradient. Terrain navigation is an important area of control for legged robots and the goal will be to investigate existing solutions, decide on an approach, then implement a controller that can navigate terrain using a variety of legged robot configurations (or with the goal for the controller to be extendable to a wider range of legged robots). This project will involve primarily research and software development.​</td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="http://research.csiro.au/robotics/research-areas/legged-robots/">http://research.csiro.au/robotics/research-areas/legged-robots/</a>
+        </td></tr></table><h3 class="supervisorname">Hanna Kurniawati</h3><p style="margin-top:1mm;">Office: 78-530<br><span title="5xxxx - add prefix (07)336
+6xxxx - add prefix (07)334
+1xxxx - add prefix (07)338">Phone: 52936</span><br>Email: <a href="mailto:hannakur@uq.edu.au">hannakur@uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">6 - Modelling with Reduced Data</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Hanna Kurniawati</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;6&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Robotics<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>COMP3702 &amp;amp;amp;gt;= 6 and comfortable programming in Linux</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4 over one or two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Constructing Predictive Models is the essence of many (if not all) scientific endeavour. Machine learning has been used for this purpose. But, most such methods require large data set, which is not always that easy to get. This project will explore decision making methods for developing predictive models with reduced data set.</td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">7 - Diversity calculator</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Hanna Kurniawati</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;7&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Information Systems<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>COMP3702 &gt;= 6 and comfortable programming in Linux environment</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>More and more companies realise the importance of workforce diversity. In fact, reaching a relatively high level of diversity has become a key target that companies/organizations would like to achieve. However, very few tools are available to support companies in developing a pathway to achieve their diversity goal. This project is our first step in developing such computational tools. In particular, this project will develop an online tool that will help companies predict the required resources (in particular time) to achieve a particular diversity goal. 
+
+Primary advisor: Kate O'Brien (Chemical Engineering)
+Co-advisor: Hanna Kurniawati</td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">8 - (semi-)autonomous cyber security</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Hanna Kurniawati</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;8&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>3</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Robotics<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>COMP3702/7702 &gt;= 6 and comfortable programming in Linux</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BE/ME,MCompSc students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>This project will look into some existing AI techniques in 3 different cyber security domain. Please email me at hannakur@uq.edu.au  if you're interested.</td></tr></table><h3 class="supervisorname">Peyman Moghadam</h3><p style="margin-top:1mm;">Office: Off Campus<br>Email: <a href="mailto:p.moghadam@uq.edu.au">p.moghadam@uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">3 -  robot and human can work together!</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Peyman Moghadam</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;3&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.cat.csiro.au/">CSIRO Queensland Centre for Advanced Technologies</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>3</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Computer Systems<br>Human Computer Interaction<br>Information Systems<br>Robotics<br>Signal and Image Processing<br>Software<br>Systems Engineering&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>Good Mathematics background, Programming c/c++ or Python, ROS</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Do you want to work with a mobile robot, a flexible robot arm and the Google glass? CSIRO has recently developed a next generation of hand-held 3D thermal sensor (called HeatWave) that has various applications such as energy-efficiency monitoring. In this project you will be asked to design and develop a system where the HeatWave is mounted on a mobile light-weight robot arm to autonomously scan the workspace to increase safety and productivity (For more information check our website http://bit.ly/12ozh4C). Before selecting any project, students need to contact me directly via CSIRO email to discuss the project details. I will not accept any students without prior agreement.  Small number of allowances are available for selected students!  </td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="http://www.peymanmoghadam.com">http://www.peymanmoghadam.com</a>
+        </td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">4 - Controlling a Robot by only a single point</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Peyman Moghadam</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;4&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.cat.csiro.au/">CSIRO Queensland Centre for Advanced Technologies</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Computer Systems<br>Human Computer Interaction<br>Information Systems<br>Robotics<br>Signal and Image Processing<br>Software<br>Systems Engineering&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>Computer vision, knowledge of python/C/C+ </td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>The aim of this project is to develop a driveless car that can drive autonomously by using only a single global feature of the road. We recently proposed and implemented a new algorithm for detecting direction of the road ahead of the vehicle using a monocular camera, which is prerequisite information for vehicle steering and path planning. In this project, student is going to work on the realistic simulation environment that last year a vacation student has developed to close the loop and control the vehicle based on the road direction and the heading direction of the vehicle. The Student should have knowledge in C/C++ programming, and computer vision. Before selecting any project, students need to contact me directly via CSIRO email to discuss the project details. I will not accept any students without prior agreement.  </td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="http://www.peymanmoghadam.com">http://www.peymanmoghadam.com</a>
+        </td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">5 - Develop a reference library for signature of different objects</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Peyman Moghadam</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;5&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.cat.csiro.au/">CSIRO Queensland Centre for Advanced Technologies</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Computer Systems<br>Embedded Systems<br>Human Computer Interaction<br>Information Systems<br>Robotics<br>Signal and Image Processing<br>Software<br>Systems Engineering&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>Good Mathematics background, Programming c/c++ or Python, ROS</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over two semesters for BE,BE/ME,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Every object has a unique 'fingerprints' similar to that of humans. These 'fingerprints' are known as spectral signatures can be measured by hyperspectral imaging system. Hyperspectral imaging sensors measure this signature by vast portion of the electromagnetic spectrum (from visible, to infrared and ultraviolet). The aim of this project is to use Hyperspectral imaging sensors to develop a reference library for signature of different objects. Later, the reference library is used to classify the materials by comparing the collected signature to a reference library. Before selecting any project, students need to contact me directly via email to discuss the project details. I will not accept any students without prior agreement.  </td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="http://www.peymanmoghadam.com">http://www.peymanmoghadam.com</a>
+        </td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">6 - Adaptive Multimodal Surveying and Mapping</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Peyman Moghadam</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;6&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Computer Systems<br>Human Computer Interaction<br>Robotics<br>Signal and Image Processing<br>Software<br>Systems Engineering&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>Good Physics background, Programming c/c++ or Python, ROS</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Hyperspectral data may be used in many industries such as in agriculture, where crop health and harvest may be determined. A Bidirectional Reflectance Distribution Function (BRDF) is used to gain more complete data about a target, or to compensate for sun angle and atmospheric changes. This involves surveying the target from multiple angles. By attaching an actuated pan/tilt hyperspectral sensor to a UAV platform or using handheld device like HeatWave, this can be achieved.  Before selecting any project, students need to contact me directly via CSIRO email to discuss the project details. I will not accept any students without prior agreement.  </td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="http://www.peymanmoghadam.com">http://www.peymanmoghadam.com</a>
+        </td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">7 - Computer Vision for Robotics </h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Peyman Moghadam</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;7&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.cat.csiro.au/">CSIRO Queensland Centre for Advanced Technologies</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Biomedical Engineering<br>Computational Science<br>Computer Systems<br>Human Computer Interaction<br>Information Environments<br>Information Systems<br>Multimedia<br>Photonics and Optical Communications<br>Robotics<br>Signal and Image Processing<br>Software<br>Systems Engineering&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>basic probability and statistics, programming using python/C++, Linux knowledge.</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>We have several allowance options for (Hons) students taking their Final Thesis on Computer vision/Machine Learning and Robotics problems in real world scenarios for different applications such as agriculture, medical robotics, and future manufacturing. The aim of these projects is to build real-world robotic solutions for real-world problems. During thesis, student will be a part of the CSIRO robotics group working on the state-of-the-art robotic platforms and software. Please contact me for more detail.  Before selecting this project, students need to contact me via CSIRO email to discuss the project details. I will not accept any students without prior agreement. </td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="http://www.peymanmoghadam.com">http://www.peymanmoghadam.com</a>
+        </td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">8 - Agriculture Robotics</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Peyman Moghadam</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;8&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.cat.csiro.au/">CSIRO Queensland Centre for Advanced Technologies</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>3</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Computer Systems<br>Human Computer Interaction<br>Information Environments<br>Information Systems<br>Photonics and Optical Communications<br>Robotics<br>Signal and Image Processing<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>Computer vision, knowledge of python/C++, Linux. </td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>In this project, we want to develop Robotic solutions for Australian farmers. We are not building robots we are making robots smarter with AI and Computer vision. Before selecting this project, students need to contact me via CSIRO email directly to discuss the project details. I will not accept any students without prior agreement. </td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="http://www.peymanmoghadam.com">http://www.peymanmoghadam.com</a>
+        </td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">9 - 3D Thermal Imaging (multispectral computer vision/robotics)</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Peyman Moghadam</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;9&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.cat.csiro.au/">CSIRO Queensland Centre for Advanced Technologies</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Biomedical Engineering<br>Robotics<br>Signal and Image Processing<br>Software<br>Systems Engineering&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>basic probability and statistics, programming using python/C++, Linux knowledge, knowledge of iOS or Android programming is a plus</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>CSIRO has recently developed a next generation of hand-held 3D thermal sensor (called HeatWave) that has various applications such as energy-efficiency monitoring and medical applications. In this project you will be asked to design and develop algorithm to further improve the performance of device, integrate new methods, desing and develop iOS or Android Apps, work on domain applications (e,g. detecting cancer cells, etc). You will be a part of HeatWave team (For more information check our website http://bit.ly/12ozh4C). Before selecting any project, students need to contact me directly via CSIRO email to discuss the project details. I will not accept any students without prior agreement.  Small number of allowances are available for selected honour students!  </td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="https://wiki.csiro.au/display/ASL/HeatWave">https://wiki.csiro.au/display/ASL/HeatWave</a>
+        </td></tr></table><h3 class="supervisorname">Anthony Ngoc Nguyen</h3><p style="margin-top:1mm;">Office: Off Campus<br>Email: <a href="mailto:anthony.nguyen@uq.edu.au">anthony.nguyen@uq.edu.au</a><p>Additional information: <a href="http://people.csiro.au/N/A/Anthony-Nguyen">http://people.csiro.au/N/A/Anthony-Nguyen</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">2 - Interactive information visualisation to explore and search electronic health records </h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Anthony Ngoc Nguyen</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;2&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Computational Science<br>eResearch<br>Human Computer Interaction<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MInfTech,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Effective information visualisation can facilitate analysis of electronic health records (EHRs) for patient treatment and clinical research. The student will design and apply innovative visual methods on structured and unstructured EHR data to potentially support clinical decision-making and research. 
+</td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="aehrc.com/research/projects/medical-free-text-retrieval-and-analytics/">aehrc.com/research/projects/medical-free-text-retrieval-and-analytics/</a>
+        </td></tr></table><h3 class="supervisorname">Marius Portmann</h3><p style="margin-top:1mm;">Office: 78-311<br><span title="5xxxx - add prefix (07)336
+6xxxx - add prefix (07)334
+1xxxx - add prefix (07)338">Phone: 51636</span><br>Email: <a href="mailto:marius@itee.uq.edu.au">marius@itee.uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">6 - Exploring Blockchain Technology</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Marius Portmann</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;6&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/ubq/">Ubiquitous Computing</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>COMS4507 or COMS7507, good programming skills</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4 over two semesters for BE,BInfTech(Hons),MCompSc students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Blockchain technology is the distributed ledger/consensus mechanism used by Bitcoin, and is currently explored for a wide range of distributed applications, beyond crypto currencies.  The goal of this project is to explore Blockchain technology and implement a distributed application, e.g. on a platform such as Ethereum.</td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">7 - Network Traffic Monitoring, Analysis and Visualisation</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Marius Portmann</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;7&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Communications<br>Computer Systems<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>COMS3200,  COMP3702</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6 over two semesters for BE,BInfTech(Hons),MEngSc students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>In this project, you have access to large network flow data sets (e.g. NetFlow or similar) provided by our industry partner. The goal is to explore AI-based data analysis methods and algorithms, e.g. for anomaly detection. Another goal is to implement a visualisation dashboard, based on Elasticsearch/Kibana, https://www.elastic.co/products/kibana.
+</td></tr></table><h3 class="supervisorname">Alexander Pudmenzky</h3><p style="margin-top:1mm;">Office: 78-316<br><span title="5xxxx - add prefix (07)336
+6xxxx - add prefix (07)334
+1xxxx - add prefix (07)338">Phone: 52937</span><br>Email: <a href="mailto:a.pudmenzky@uq.edu.au">a.pudmenzky@uq.edu.au</a><p>My interest is in the Internet of Things (IoT) & Wearable Technology. I am offering projects that are fully supported by a client in industry who will not only spend time with you to specify the requirements, but also be a mentor for you throughout the year, in addition to me as your UQ academic advisor. This will enable you to continue with the project beyond the course if you wish to increase your opportunities for employment or going into business yourself. Projects for 2018 will be under the theme of SmartHome and are offered under the umbrella of a Super Project. Super Projects are completed by many students working in parallel on smaller aspects of the same project so that, even though your own project is completed by yourself, all projects as a whole will complement each other like pieces of a puzzle to form a larger (super) project.
+
+In an attempt to support most mobile and desktop devices with a minimum development and maintenance effort, all server applications are to be developed as a webapp using JavaScript (jQuery mobile), HTML5/CSS3 and PHP/mySQL. You will be given access to a UQ ITEE SmartOS zone (Web & DB server), Git repository and a budget to purchase hardware and other parts of your choice required to complete your project. We will use Raspberry Pi, Arduino, ESP8266, ESP32 or similar to develop our initial hardware prototypes and design our own printed circuit boards (PCB) for the final product later.<p>Additional information: <a href="http://mythesis.alexpudmenzky.com">http://mythesis.alexpudmenzky.com</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">6 - SmartHome (IoT)</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Alexander Pudmenzky</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;6&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/sse/">Systems and Software Engineering Group</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>20</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Computer Systems<br>Embedded Systems<br>Human Computer Interaction<br>Information Environments<br>Information Systems<br>Multimedia<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>Depending on module any combination of: Embedded systems programming, PHP, mySQL, jQuery Mobile</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4 over two semesters for BE,BE/ME,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MInfTech,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>SmartHome Super Project
+
+Full description (including figure) on: http://mythesis.alexpudmenzky.com/SmartHome_ProjectDescriptions.pdf
+Additional resources: http://mythesis.alexpudmenzky.com/
+
+The Internet of Things (IoT) is currently at the top of the Gartner Hype Cycle for Emerging Technologies 2017 (https://www.gartner.com/smarterwithgartner/top-trends-in-the-gartner-hype-cycle-for-emerging-technologies-2017) and this super project is exploring how a SmartHome could enhance a person's real-life experience. 
+
+You will become a developer in a (pretend) start-up company that is taking advantage of the current hype around Internet of Things (IoT) devices in home automation. 
+
+The SmartHome consists of two controller modules (Web-app and VirtualHome) and many individual in-home modules connected to the controller systems via WiFi to access a common database. All modules will be purchasable separately from a commercial website to be developed. Figure 1 (see link to PDF above) displays the overview of the system to be developed by up to 20 students.
+
+Please refer to the link above for a detailed description of each of the 20 modules to be developed.
+</td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="http://mythesis.alexpudmenzky.com/SmartHome_ProjectDescriptions.pdf">http://mythesis.alexpudmenzky.com/SmartHome_ProjectDescriptions.pdf</a>
+        </td></tr></table><h3 class="supervisorname">Carl Reidsema</h3><p style="margin-top:1mm;">Office: 45-311<br><span title="5xxxx - add prefix (07)336
+6xxxx - add prefix (07)334
+1xxxx - add prefix (07)338">Phone: 53596</span><br>Email: <a href="mailto:c.reidsema@uq.edu.au">c.reidsema@uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">1 - Learning Analytics Dashboard Design</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Carl Reidsema</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;1&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="https://www.elipse.uq.edu.au/">Centre for eLearning Innovations and Partnerships in Science and Engineering</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>4</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Computational Science<br>eResearch<br>Human Computer Interaction<br>Information Environments<br>Information Systems<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>Good programming and front end web skills</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BE/ME,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>The Centre for eLearning Innovations and Partnerships in Science and Engineering (eLIPSE) is a new centre at UQ within the Faculty of Engineering, Architecture and Information Technology (EAIT). The Centre has made significant inroads in the development of innovative web-based software that supports student learning. Students who select this project will join an established team of eLearning Designers and developers who are designing Learning Analytics Dashboards that display an individual student's learning progress using a wide variety of data sources including Apache Web Log clickstream data, demographic enrolment data as well as assessment performance data. The Dashboards will be instrumented in order to analyse student preferences for visual displays and controls in order to ascertain optimal design states. The specific aims of the project are negotiable and can range from the design of experiments to test the usability of various interface designs to the development of algorithms and/or software modules that provide efficient and engaging user interactions with the Dashboard.  
+</td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="https://www.elipse.uq.edu.au/home">https://www.elipse.uq.edu.au/home</a>
+        </td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">2 - Facebook API and Data Visualisation Software for Student Learning Performance Feedback Dashboards</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Carl Reidsema</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;2&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="https://www.elipse.uq.edu.au/">Centre for eLearning Innovations and Partnerships in Science and Engineering</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>4</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Communications<br>Computational Science<br>eResearch<br>Human Computer Interaction<br>Information Environments<br>Information Systems<br>Multimedia<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BE/ME,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>The Centre for eLearning Innovations and Partnerships in Science and Engineering (eLIPSE) is a new centre at UQ within the Faculty of Engineering, Architecture and Information Technology (EAIT). The Centre has made significant inroads in the development of innovative web-based software that supports student learning. Students who select this project will join an established team of eLearning Designers and developers who are working on a range of innovative software development projects. The aims of this project will be to explore the use of Facebook as a tool that provides effective communication functionality within large first year courses. Methods that can increase student engagement with this social media tool as well as API's that allow for integration of other communication tools within the Facebook environment will be explored. Students can negotiate specific project goals against their own skill set and areas of interest. </td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="https://www.elipse.uq.edu.au/home">https://www.elipse.uq.edu.au/home</a>
+        </td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">3 - The Learning Pathway: An online system linked to Blackboard LMS that will Provide students with individually tailored maps for planning and tracking learning trajectories</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Carl Reidsema</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;3&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="https://www.elipse.uq.edu.au/">Centre for eLearning Innovations and Partnerships in Science and Engineering</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>4</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Computational Science<br>eResearch<br>Human Computer Interaction<br>Information Environments<br>Multimedia<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BE/ME,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>The Centre for eLearning Innovations and Partnerships in Science and Engineering (eLIPSE) is a new centre at UQ within the Faculty of Engineering, Architecture and Information Technology (EAIT). The Centre has made significant inroads in the development of innovative web-based software that supports student learning. Students who select this project will join an established team of eLearning Designers and developers.
+
+This project will focus on developing high level, flexible and extensible graphical visualisation tools that provide both academics and students with construct-able data models representing student learning behaviours against learning performance. That is, what actions did successful students undertake in completing a range of learning tasks and how do these compare to students who were less successful?  </td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="https://www.elipse.uq.edu.au/home">https://www.elipse.uq.edu.au/home</a>
+        </td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">4 - MOOCchat Online Peer Learning Software </h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Carl Reidsema</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;4&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>4</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Computer Systems<br>eLearning<br>eResearch<br>Human Computer Interaction<br>Information Systems<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BE/ME,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MInfTech,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>The Centre for eLearning Innovations and Partnerships in Science and Engineering (eLIPSE) is a new centre at UQ within the Faculty of Engineering, Architecture and Information Technology (EAIT). The Centre has made significant inroads in the development of innovative web-based software that supports student learning. Students who select this project will join an established team of eLearning Designers and developers. 
+
+In 2014, eLIPSE collaborated with the University of California Berkeley, to trial a real-time group discussion environment developed to support chat-based peer learning in MOOCs. The tool facilitates chat-based guided small peer discussion in MOOCs around challenging problem / concept questions. Students enter the system and are given an exam/quiz question that they respond to and then are put into ad-hoc discussion groups with the goal of determining whether their responses are correct. This chat buffer is recorded and analysed for evidence of peer learning and conceptual understanding. Analysis of this data can help to ascertain whether and when:
+
+1. collaborative discussion / peer instruction is occurring
+2. collaborative discussion is helping with understanding
+3. to best facilitate effective online collaborative learning online
+
+Student performance on each quiz gives an indication of their level of understanding of the concept prior to the chat. Their post-chat responses and their responses to the related mid-semester questions can be used to ascertain learning gains for those who did the chat versus those who did not participate. Together these measures will give qualitative and quantitative understanding of the gains in learning as a result of the MOOCchat discussions. 
+
+Students who select this research project may focus on the design and running of experiments to determine the effectiveness of the software in improving student engagement and performance of learning or can choose to improve the overall design of the software system to allow for administrator control or improvements to the user interface. </td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="https://www.elipse.uq.edu.au/home">https://www.elipse.uq.edu.au/home</a>
+        </td></tr></table><h3 class="supervisorname">Surya Singh</h3><p style="margin-top:1mm;">Office: 78-531<br><span title="5xxxx - add prefix (07)336
+6xxxx - add prefix (07)334
+1xxxx - add prefix (07)338">Phone: 58328</span><br>Email: <a href="mailto:spns@uq.edu.au">spns@uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">14 - Privacy Preserving Roadmap Planning [NEW]</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Surya Singh</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;14&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>AI/Cognitive Science<br>Computational Science<br>Information Systems<br>Robotics<br>Signal and Image Processing<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>METR4202 or COMS4507</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BE/ME,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MInfTech,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>This project considers the application of homomorphic cryptosystems (e.g., ElGamal or Paillier) in motion and route planning.   (co supervised by A. Prof. Marius Portmann). 
+
+Distributed (cloud) motion/route planning (e.g., Google Maps, Telerobotic medical operations) typically involves sharing initial and final states (origin and destination in the case of Google Maps) and thus may &quot;leak&quot; user privacy.    This problem also appears in various contexts, such as in Privacy preserving route planning [1-2].  The structure of motion planning problems [3] may well be suited to leverage results from this domain, particularly for cases where one needs to computing distance functions of routes and/or assess traffic (group-sourced) information in a private manner.
+
+Note: This is separate from the process of communicating securely to the remote &quot;solver&quot; (i.e., Tor/Orbot, SSL, etc.)
+
+Refs:
+[1] Frikken, Keith B., and Mikhail J. Atallah. &quot;Privacy preserving route planning.&quot; Proceedings of the 2004 ACM workshop on Privacy in the electronic society. ACM, 2004.
+[2]  Bilogrevic, Igor, et al. &quot;Privacy-preserving optimal meeting location determination on mobile devices.&quot; IEEE transactions on information forensics and security 9.7 (2014): 1141-1156.
+[3] Lafferriere, Gerardo, and Hector J. Sussmann. &quot;A differential geometric approach to motion planning.&quot; Nonholonomic motion planning. Springer US, 1993. 235-270.</td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="http://robotics.itee.uq.edu.au/">http://robotics.itee.uq.edu.au/</a>
+        </td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">18 - Biomedical Engineering Meets Robotics [NEW] [ARC DP co-funding]</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Surya Singh</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;18&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Biomedical Engineering<br>Computational Science<br>Robotics<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>METR4202 or MECH3200|3300|3410</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BE/ME,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MInfTech,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Accurate surgical targeting means less trauma and better outcomes. This project will help build a testbed/phantom (in collaboration with UWA as part of ARC DP160100714) [1].
+
+Though this we will create and validate a novel integrated framework for biomedical systems that can place a needle into a lesion accurately. The need is pressing. Needles are used in over half of all surgical procedures; yet, up to 38% of these are affected by targeting errors. 
+
+Ref:
+[1] Ma, J., et al. &quot;Evaluation of accuracy of non-linear finite element computations for surgical simulation: study using brain phantom.&quot; Computer methods in biomechanics and biomedical engineering 13.6 (2010): 783-794.
+</td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="http://robotics.itee.uq.edu.au/">http://robotics.itee.uq.edu.au/</a>
+        </td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">19 - (Virtual) Robotics and Experimental Platform [NEW]</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Surya Singh</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;19&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Computational Science<br>Robotics<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>METR4202</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BE/ME,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MInfTech,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>With the help of V-REP and a Kinova arm, this project ties together virtual and real robotics handily. 
+
+V-REP [1] is used for fast algorithm development, factory automation simulations, fast prototyping and verification, robotics related education, remote monitoring, safety double-checking, etc.   A Kinova arm is a lightweight dynamic robot arm.
+
+This project will add the Kinvoa arm to the V-REP package and connect them via a Lua (or Python or ROS binding).  In this way as the V-REP robot arm moves the physical arm moves in real-time too.
+
+Ref:
+[1] Rohmer, Eric, Surya PN Singh, and Marc Freese. &quot;V-REP: A versatile and scalable robot simulation framework.&quot; 2013 IEEE/RSJ International Conference on Intelligent Robots and Systems. IEEE, 2013.
+</td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="http://robotics.itee.uq.edu.au/">http://robotics.itee.uq.edu.au/</a>
+        </td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">21 - Metric Monocular Depth from Small Motion Accelerated [NEW!]</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Surya Singh</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;21&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Computational Science<br>Computer Systems<br>Robotics<br>Signal and Image Processing<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>ELEC3004</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BE/ME,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MInfTech,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Determine the Canonical Best Sequence to take to go from a small video &quot;snapshot&quot; to a 3D model.
+
+Ref: 
+[1] Christopher Ham,. Ming-Fang Chang, Simon Lucey and Surya Singh, &quot;Metric Monocular Depth from Small Motion Accelerated&quot;, 3DV 2017, http://www.ci2cv.net/media/papers/3dv_fastdepth.pdf
+
+</td></tr><tr><th nowrap align=right>&nbsp;Further Information:&nbsp;</th>
+        <td align=left colspan=3><a href="http://robotics.itee.uq.edu.au/">http://robotics.itee.uq.edu.au/</a>
+        </td></tr></table><h3 class="supervisorname">Jim Steel</h3><p style="margin-top:1mm;">Office: Off Campus<br>Email: <a href="mailto:j.steel@uq.edu.au">j.steel@uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">1 - Evolution of SNOMED Clinical Terminology</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Jim Steel</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;1&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Information Systems<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>SNOMED is a large structured ontology of medical terminology, covering a huge range of medical terms from procedures, to medications to activities and organisations, and including structured information about each term (finding site of a disease, preferred terms and synonyms, specialisation/generalisation hierarchies, etc). SNOMED has evolved over time, as terms are added, removed or modified. This project aims to analyse this evolution, using data visualisation, or metrics, or other kinds of analysis to shed light on how the information has changed over time, and potentially using this to derive interesting information about the current state of SNOMED, or of what might change in the future.
+
+This project would be conducted in collaboration with the CSIRO Australian E-Health Research Centre.</td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">2 - Patient-facing FHIR Software</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Jim Steel</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;2&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Human Computer Interaction<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>FHIR is a new standard for interoperability of health software, based on simple (by clinical information standards!) REST interactions. There is a big move in the e-Health space towards the use of FHIR for exchanging data in the domain, with most of the focus on exchange between clinicians or institutions. There has been less focus on communicating with patients themselves. We would like a student to explore the development of some software that focuses on software for use by patients (perhaps for their own use, perhaps for communicating with their clinician). There is a lot of scope to choose a project topic - both technically (open choice of implementation platform), and in which part of FHIR or what kind of user/activity to focus on (diagnostic reports, medications/prescriptions, etc).
+
+This project would be conducted in collaboration with the CSIRO Australian E-Health Research Centre, and potentially (by negotiation) with other partners able to provide sample data.</td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">3 - Clinical Analytics and Reporting Visual Explorer (CARVE)</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Jim Steel</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;3&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Information Systems<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>Solid programming. Some database knowledge useful. Web experience useful.</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6 over one or two semesters for BE,BE/ME,BInfTech(Hons),MEngSc,MCompSc,MInfTech students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>Electronic medical record repositories contain valuable clinical data recorded with fine-grained standardized codes representing diagnoses, procedures, and medications. However, due to the number of different codes (~500,000 in SNOMED CT) this leads to sparse data and makes analytics and reporting difficult. The project will focus on designing and implementing a web application that allows the construction and visualisation of aggregation categories that group sets of codes, identified using FHIR ValueSets, for reporting and analytic tasks.  The initial focus would be on supporting the query-based ​selection of codes for distinct aggregation categories. This project would use the new HL7 FHIR standard, and exploit CSIRO’s Ontoserver technology that underpins the National Clinical Terminology Service recently launched by the Australian Digital Health Agency. It carries the opportunity to influence and improve the FHIR standard itself. For extra credit, the student will also support visualisation of aggregate patient data using the SMART on FHIR.
+​</td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">6 - Generating webform editors for FHIR resources</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Jim Steel</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;6&nbsp;</th></tr><tr><th nowrap align=right></th><td align=left></td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>1</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6 over one or two semesters for BE,BE/ME,BInfTech(Hons),BMultMedDes(Hons),MEngSc,MCompSc,MInfTech,MIDes students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>FHIR is an emerging standard for exchange of healthcare information, based on the provision of REST web service interfaces to a relatively small (about 100) set of resources types. Rather than creating form-based editors for each resource type by hand, it would be preferable to be able to generate, or partially generate, an editor based on the definition of the structure of the resource type: what attributes it has, their types and allowable values, etc. This might be done as a mapping directly to web technologies (HTML, Angular, etc), or via an intermediate structure such as FHIR Questionnaires. The mappings would need to be flexible, to allow for variability such as the grouping of related attribute fields, or choice of what widget (e.g. radio button vs dropdown vs text field) is used for each attribute).</td></tr></table><h3 class="supervisorname">Richard Thomas</h3><p style="margin-top:1mm;">Office: 78-316<br><span title="5xxxx - add prefix (07)336
+6xxxx - add prefix (07)334
+1xxxx - add prefix (07)338">Phone: 52429</span><br>Email: <a href="mailto:richard.thomas@uq.edu.au">richard.thomas@uq.edu.au</a><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">3 - Programming Assessment Tool</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Richard Thomas</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;3&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/sse/">Systems and Software Engineering Group</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>Strong programming skills, some web development skill, COMP4403 would be helpful but not required</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6,8 over one or two semesters for BE,BInfTech(Hons),MEngSc,MCompSc students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>You will build a tool to provide semi-automated assessment of programs. The tool would be used by students for self-assessment to determine if they have met requirements for a programming assignment. It would also be used by tutors and lecturers to assist in the marking process.
+
+The tool would assess a program by executing it against a set of tests and also by analysing the structure of the source code. It would report back on tests passed or failed. It would also report back on potential issues with the code's structure as checked against a set of criteria. The output would be able to be adjusted based on what details a course coordinator wanted students to see.
+
+It is expected that the project would use existing tools, to provide as much functionality as possible in a limited time. The project should be designed so that the source code analysis and testing components can be replaced to accommodate different programming languages and testing tools (e.g. Python and Java). The initial version of the tool would target a single language. The tool would also collect data on student usage. The tool would also use MoSS to perform plagiarism detection.</td></tr></table><h3 class="projecttitle" style="margin-bottom:1mm;margin-top:5mm;color: #115;">4 - Automated Testing for libGDX</h3><table style="width:100%;" border=1 cellpadding=1 cellspacing=0
+        bordercolor="#000000"><tr><th style="width:20%;" nowrap align=right>Supervisor:&nbsp;</th><td align=left>Richard Thomas</td><th style="width:20%;" align=right>
+        Project ID:</th><td style="width:5%;" align=center>&nbsp;4&nbsp;</th></tr><tr><th nowrap align=right>&nbsp;Research Group:&nbsp;</th><td align=left><a href="http://www.itee.uq.edu.au/sse/">Systems and Software Engineering Group</a>&nbsp;</td><th align=right>&nbsp;Max. students:&nbsp;</th>
+    <td align=center>2</td></tr><tr><th nowrap align=right>&nbsp;Discipline(s):&nbsp;</th><td align=left>Computer Systems<br>Human Computer Interaction<br>Software&nbsp;</td>
+            <th align=right>&nbsp;Students signed up:&nbsp;</th>
+        <td align=center>0</td></tr><tr><th nowrap align=right>&nbsp;Prerequisite(s):&nbsp;</th>
+        <td align=left colspan=3>DECO2800</td></tr><tr><th nowrap align=right>&nbsp;Project Type(s):&nbsp;</th>
+        <td align=left colspan=3>#4,6 over one or two semesters for BE,BE/ME,BInfTech(Hons),MEngSc,MCompSc,MInfTech students</td></tr><tr><th nowrap align=right>&nbsp;Description:&nbsp;</th>
+        <td align=left colspan=3>libGDX is a popular cross-platform tool for creating games. It provides a sophisticated environment for producing media rich applications. Currently it has limited testing support, particularly in terms of automated integration, system and functional testing. This project will be to create a testing environment for libGDX applications. A starting point for ideas can be found at this blog post: http://bitiotic.com/blog/2012/04/05/libgdx-test-automation-through-input-abuse/</td></tr></table>             </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="uq-footer">
+<div class="row">
+    <div id="footer-address" class="vcard medium-3 small-6 columns">
+        <a href="http://www.uq.edu.au/" class="uq-logo">The University of Queensland, Australia</a>
+        <address id="uq-address" class="adr">
+            <span class="street-address">Brisbane</span> <span class="locality">St Lucia</span>, <span class="region">QLD</span> <span class="postal-code">4072</span>
+        </address>
+        <p class="tel"><a href="tel:+61733651111">+61 7 3365 1111</a></p>
+        <p class="campus">Other Campuses: <a href="http://www.uq.edu.au/ipswich/">UQ Ipswich</a>, <br />
+            <a href="http://www.uq.edu.au/gatton/">UQ Gatton</a>, <a href="http://www.uq.edu.au/about/herston-campus">UQ Herston</a></p>
+        <p class="directions"><a href="http://www.uq.edu.au/maps/">Maps and Directions</a></p>
+        <p id="copyright">&copy; 2013 The University of Queensland</p>
+    </div>
+
+    <div id="footer-mandatory" class="medium-3 small-6 columns">
+        <h3>A Member of</h3>
+        <p class="member-logos">
+            <a href="http://www.universitiesaustralia.edu.au/"><img src="https://eait.uqstatic.net/xweb/2014/images/logo-ua.gif" width="69" height="37" alt="Universities Australia" /></a>
+            <a href="http://www.universitas21.com/" class="no-border"><img src="https://eait.uqstatic.net/xweb/2014/images/logo-universitas.gif" width="25" height="25" alt="Universitas 21" /></a>
+            <a href="http://www.edx.org/"><img src="https://eait.uqstatic.net/xweb/2014/images/logo-edx.gif" width="48" height="37" alt="edX" /></a>
+            <a href="http://www.go8.edu.au/" class="no-border"><img src="https://eait.uqstatic.net/xweb/2014/images/logo-go8.gif" width="123" height="18" alt="Group of 8" /></a>
+        </p>
+        <p>
+            <a rel="external" href="http://www.uq.edu.au/terms-of-use/">Terms of use</a> | <a rel="external" href="http://www.uq.edu.au/feedback">Feedback</a>
+        </p>
+        <p>
+            <abbr title="Australian Business Number">ABN</abbr>: 63 942 912 684<br />
+            CRICOS Provider No: <a class="footerlinks" href="http://www.uq.edu.au/about/cricos-link">00025B</a>
+        </p>
+    </div>
+
+    <div id="footer-links" class="medium-3 columns hide-for-small">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="http://www.uq.edu.au/news/">For Media</a></li>
+            <li><a href="http://www.uq.edu.au/contacts/">Emergency Contact</a></li>
+        </ul>
+
+        <h3>Social Media</h3>
+        <ul class="social-links">
+            <li class="icon-facebook"><a href="https://www.facebook.com/uniofqld">Facebook</a></li>
+            <li class="icon-twitter"><a href="http://twitter.com/uq_news">Twitter</a></li>
+            <li class="icon-flickr"><a href="http://www.flickr.com/photos/uqnews/sets/">Flickr</a></li>
+            <li class="icon-instagram"><a href="http://instagram.com/uniofqld">Instagram</a></li>
+            <li class="icon-youtube"><a href="https://www.youtube.com/universityqueensland">YouTube</a></li>
+            <li class="icon-vimeo"><a href="http://vimeo.com/uq">Vimeo</a></li>
+            <li class="icon-itunesu"><a href="http://www.uq.edu.au/itunes/">iTunes U</a></li>
+            <li class="icon-linkedin"><a href="http://www.linkedin.com/company/university-of-queensland">Linkedin</a></li>
+        </ul>
+    </div>
+
+    <div id="footer-explore" class="medium-3 columns hide-for-small">
+        <h3>Explore</h3>
+        <ul>
+            <li><a href="http://www.alumni.uq.edu.au/giving">Giving to UQ</a></li>
+            <li><a href="http://www.uq.edu.au/departments/">Faculties &amp; Divisions</a></li>
+            <li><a href="http://www.uq.edu.au/uqjobs/">UQ Jobs</a></li>
+            <li><a href="http://www.uq.edu.au/contacts/">Contact UQ</a></li>
+            <li><a href="http://www.uq.edu.au/services/">Services &amp; Facilities</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<script type="text/javascript" src="https://eait.uqstatic.net/xweb/2014/js/uq.menu.js"></script>
+<script type="text/javascript" src="https://eait.uqstatic.net/xweb/2014/js/uq.layout.js"></script>
+
+<script type="text/javascript" src="https://eait.uqstatic.net/lib/foundation/5.0.2/foundation.min.js"></script>
+
+<script type="text/javascript">
+    $(document).foundation();
+</script>
+
+
+</body>
+
+</html>
