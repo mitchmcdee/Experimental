@@ -71,16 +71,42 @@ def T(s, a, s_p):
 
     return t_c * t_s
 
-def V(s, a):
-    return R(s, a) + GAMMA * sum([T(s, a, s_p) * V_t[s_p][0] for s_p in getTransitionStates(s, a)])
+def V_p(s, p):
+    return R(s, p) + GAMMA * sum([T(s, p, s_p) * V_t[s_p][0] for s_p in getTransitionStates(s, p)])
 
-V_t = {s: [0,0] for s in getStates()}
+def V_a(s):
+    maxi = (0, None)
+    for a in getActions(s):
+        locali = V_p(s, a)
+        if locali > maxi[0]:
+            maxi = (locali, a)
+    return maxi[1]
+
+# V_t = {(0,0): [0, 0, [0,3]],
+#        (0,1): [0, 0, [0,2]],
+#        (0,2): [0, 0, [0,2]],
+#        (0,3): [0, 0, [0,1]],
+#        (0,4): [0, 0, [0,0]],
+#        (1,0): [0, 0, [0,3]],
+#        (1,1): [0, 0, [1,0]],
+#        (1,2): [0, 0, [1,0]],
+#        (1,3): [0, 0, [0,0]],
+#        (2,0): [0, 0, [0,1]],
+#        (2,1): [0, 0, [1,0]],
+#        (2,2): [0, 0, [0,0]],
+#        (3,0): [0, 0, [1,0]],
+#        (3,1): [0, 0, [0,0]],
+#        (4,0): [0, 0, [0,0]]}
+V_t = {s: [0, 0, random.choice(list(getActions(s)))] for s in getStates()}
 for _ in range(LIMIT):
-    # Update new values
+    # Estimate policy
     for s in getStates():
-        a = random.choice(list(getActions(s)))
-        V_t[s][1] = V(s, a)
+        V_t[s][1] = V_p(s, V_t[s][2])
         print('_V:', s, *V_t[s])
+
+    # Improve policy
+    for s in getStates():
+        V_t[s][2] = V_a(s)
 
     # Update old values
     for s in getStates():
