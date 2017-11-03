@@ -1,3 +1,5 @@
+import random
+
 MAX_BUY = 3
 MAX_STORE = 4
 GAMMA = 0.95 # Discount factor
@@ -69,15 +71,17 @@ def T(s, a, s_p):
 
     return t_c * t_s
 
-def V(s):
-    return max([R(s, a) + GAMMA * sum([T(s, a, s_p) * V_t[s_p][0] for s_p in getTransitionStates(s, a)]) for a in getActions(s)])
+def V(s, a):
+    return R(s, a) + GAMMA * sum([T(s, a, s_p) * V_t[s_p][0] for s_p in getTransitionStates(s, a)])
 
 V_t = {s: [0,0] for s in getStates()}
 for _ in range(LIMIT):
     # Update new values
     for s in getStates():
-        V_t[s][1] = V(s)
+        a = random.choice(list(getActions(s)))
+        V_t[s][1] = V(s, a)
         print('_V:', s, *V_t[s])
+
     # Update old values
     for s in getStates():
         V_t[s][0] = V_t[s][1]
