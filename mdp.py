@@ -3,7 +3,7 @@ import random
 MAX_BUY = 3
 MAX_STORE = 4
 GAMMA = 0.95 # Discount factor
-LIMIT = 2    # Iteration limit
+LIMIT = 1000    # Iteration limit
 
 P_C = [[0.3, 0.2, 0.2, 0.1, 0.2],
        [0.3, 0.2, 0.2, 0.1, 0.2],
@@ -71,43 +71,67 @@ def T(s, a, s_p):
 
     return t_c * t_s
 
-def V_p(s, p):
-    return R(s, p) + GAMMA * sum([T(s, p, s_p) * V_t[s_p][0] for s_p in getTransitionStates(s, p)])
+def Q(s, a, V_t):
+    return R(s, a) + GAMMA * sum([T(s, a, s_p) * V_t[s_p][0] for s_p in getTransitionStates(s, a)])
 
-def V_a(s):
-    maxi = (0, None)
-    for a in getActions(s):
-        locali = V_p(s, a)
-        if locali > maxi[0]:
-            maxi = (locali, a)
-    return maxi[1]
+def V(s, V_t):
+    return max([(Q(s, a, V_t), a) for a in getActions(s)], key=lambda v:v[0])
 
-# V_t = {(0,0): [0, 0, [0,3]],
-#        (0,1): [0, 0, [0,2]],
-#        (0,2): [0, 0, [0,2]],
-#        (0,3): [0, 0, [0,1]],
-#        (0,4): [0, 0, [0,0]],
-#        (1,0): [0, 0, [0,3]],
-#        (1,1): [0, 0, [1,0]],
-#        (1,2): [0, 0, [1,0]],
-#        (1,3): [0, 0, [0,0]],
-#        (2,0): [0, 0, [0,1]],
-#        (2,1): [0, 0, [1,0]],
-#        (2,2): [0, 0, [0,0]],
-#        (3,0): [0, 0, [1,0]],
-#        (3,1): [0, 0, [0,0]],
-#        (4,0): [0, 0, [0,0]]}
-V_t = {s: [0, 0, random.choice(list(getActions(s)))] for s in getStates()}
-for _ in range(LIMIT):
-    # Estimate policy
-    for s in getStates():
-        V_t[s][1] = V_p(s, V_t[s][2])
-        print('_V:', s, *V_t[s])
+def RTDP():
+    V_t = {s: [0,0,None] for s in getStates()}
+    for _ in range(LIMIT):
+        s = (0,0)
+        for _ in range(5):
+            _, a = V(s, V_t)
+            V_t[s][1] = Q(s, a, V_t)
+            V_t[s][0] = V_t[s][1]
+            V_t[s][2] = a
+            # s = (s[0] + a[0], s[1] + a[1])
+            s = random.choice(list(getActions(s)))
+            print('_V:', s, *V_t[s])
 
-    # Improve policy
-    for s in getStates():
-        V_t[s][2] = V_a(s)
 
-    # Update old values
-    for s in getStates():
-        V_t[s][0] = V_t[s][1]
+def valueIteration():
+    V_t = {s: [0, 0, None] for s in getStates()}
+    for _ in range(LIMIT):
+        # Update new values
+        for s in getStates():
+            V_t[s][1:] = V(s, V_t)
+            print('_V:', s, *V_t[s])
+
+        # Update old values
+        for s in getStates():
+            V_t[s][0] = V_t[s][1]
+
+def policyIteration():
+    V_t = {(0,0): [0, 0, [0,3]],
+           (0,1): [0, 0, [0,2]],
+           (0,2): [0, 0, [0,2]],
+           (0,3): [0, 0, [0,1]],
+           (0,4): [0, 0, [0,0]],
+           (1,0): [0, 0, [0,3]],
+           (1,1): [0, 0, [1,0]],
+           (1,2): [0, 0, [1,0]],
+           (1,3): [0, 0, [0,0]],
+           (2,0): [0, 0, [0,1]],
+           (2,1): [0, 0, [1,0]],
+           (2,2): [0, 0, [0,0]],
+           (3,0): [0, 0, [1,0]],
+           (3,1): [0, 0, [0,0]],
+           (4,0): [0, 0, [0,0]]}
+    # V_t = {s: [0, 0, random.choice(list(getActions(s)))] for s in getStates()}
+    for _ in range(LIMIT):
+        # Estimate policy
+        for s in getStates():
+            V_t[s][1] = Q(s, V_t[s][2], V_t)
+
+        # Improve policy
+        for s in getStates():
+            _, V_t[s][2] = V(s, V_t)
+            print('_V:', s, *V_t[s])
+
+        # Update old values
+        for s in getStates():
+            V_t[s][0] = V_t[s][1]
+
+RTDP()
