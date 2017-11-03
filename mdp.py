@@ -72,14 +72,12 @@ def T(s, a, s_p):
 def V(s):
     return max([R(s, a) + GAMMA * sum([T(s, a, s_p) * V_t[s_p][0] for s_p in getTransitionStates(s, a)]) for a in getActions(s)])
 
-def isValidState(s, a):
-    s_c, s_s = s
-    a_c, a_s = a
-    return True if s_c + a_c + s_s + a_s <= MAX_STORE else False
-
 V_t = {s: [0,0] for s in getStates()}
 for _ in range(LIMIT):
+    # Update new values
+    for s in getStates():
+        V_t[s][1] = V(s)
+        print('_V:', s, *V_t[s])
+    # Update old values
     for s in getStates():
         V_t[s][0] = V_t[s][1]
-        V_t[s][1] = V(s)
-        print('_V:', s, V_t[s][0], V_t[s][1])
