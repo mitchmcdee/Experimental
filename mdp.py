@@ -38,6 +38,14 @@ def getActions(s):
             if s_c + s_s + a_c + a_s > MAX_STORE: continue
             yield(a_c, a_s)
 
+def getRandomSample(s, a):
+    totalProb = 0
+    chance = random.random()
+    for s_p in getTransitionStates(s, a):
+        totalProb += T(s, a, s_p)
+        if chance <= totalProb:
+            return s_p
+
 def R(s, a):
     s_c, s_s = s
     a_c, a_s = a
@@ -81,15 +89,11 @@ def RTDP():
     V_t = {s: [0,0,None] for s in getStates()}
     for _ in range(LIMIT):
         s = (0,0)
-        for _ in range(5):
-            _, a = V(s, V_t)
-            V_t[s][1] = Q(s, a, V_t)
-            V_t[s][0] = V_t[s][1]
-            V_t[s][2] = a
-            # s = (s[0] + a[0], s[1] + a[1])
-            s = random.choice(list(getActions(s)))
+        for _ in range(5):                         # 5 Days
+            _, a = V(s, V_t)                       # Greedy compute action
+            V_t[s] = [V_t[s][1], Q(s, a, V_t), a]  # Update
+            s = getRandomSample(s, a)              # Sample
             print('_V:', s, *V_t[s])
-
 
 def valueIteration():
     V_t = {s: [0, 0, None] for s in getStates()}
