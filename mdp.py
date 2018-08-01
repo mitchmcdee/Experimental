@@ -2,7 +2,7 @@ import random
 
 MAX_BUY = 3
 MAX_STORE = 4
-GAMMA = 0.95 # Discount factor
+GAMMA = 0.95    # Discount factor
 LIMIT = 1000    # Iteration limit
 
 P_C = [[0.3, 0.2, 0.2, 0.1, 0.2],
@@ -49,7 +49,7 @@ def getRandomSample(s, a):
 def R(s, a):
     s_c, s_s = s
     a_c, a_s = a
-    
+
     r_c =    1 * sum([min(i, s_c + a_c) * P_C[s_c + a_c][i] for i in range(1,             MAX_STORE + 1)])
     r_c -= 0.5 * sum([(i - s_c - a_c)   * P_C[s_c + a_c][i] for i in range(s_c + a_c + 1, MAX_STORE + 1)])
 
@@ -82,14 +82,17 @@ def T(s, a, s_p):
 def Q(s, a, V_t):
     return R(s, a) + GAMMA * sum([T(s, a, s_p) * V_t[s_p][0] for s_p in getTransitionStates(s, a)])
 
+# Returns the best value and its action
 def V(s, V_t):
     return max([(Q(s, a, V_t), a) for a in getActions(s)], key=lambda v:v[0])
 
 def RTDP():
     V_t = {s: [0,0,None] for s in getStates()}
     for _ in range(LIMIT):
-        s = (0,0)
-        for _ in range(5):                         # 5 Days
+        s = (0,0) # Initial state
+
+        # Compute 5 days worth
+        for _ in range(5):
             _, a = V(s, V_t)                       # Greedy compute action
             V_t[s] = [V_t[s][1], Q(s, a, V_t), a]  # Update
             s = getRandomSample(s, a)              # Sample

@@ -25,6 +25,9 @@ for p in projects:
             if not header or not info:
                 continue
 
+            if header == 'Students signed up:' and info != '0':
+                print(info, projectTitle)
+
             with tag('details'):
                 with tag('summary'):
                     text(header)
